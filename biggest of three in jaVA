@@ -1,0 +1,49 @@
+import java.util.Scanner;
+class mycompose{
+int a,b,c,bn,sn;
+Scanner sc;
+
+void takeinput(){
+sc=new Scanner(System.in);
+System.out.println("Input first number");
+a=sc.nextInt();
+
+System.out.println("Input second number");
+b=sc.nextInt();
+System.out.println("Enter third number");
+c=sc.nextInt();
+
+}
+void compareThis(){
+if(a>b && a>c){
+bn=a;
+}
+else if(b>a && b>c){
+bn=b;
+}
+else{
+bn=c;
+}
+if(a<b && a<c){
+sn=a;
+}
+else if(b<a && b<c){
+sn=b;
+}
+else{
+sn=c;
+}
+}
+void display(){
+System.out.println("Biggest number -> "+bn);
+System.out.println("Smallest number -> "+sn);
+
+}
+
+public static void main(String[] arg){
+mycompose obj=new mycompose();
+obj.takeinput();
+obj.compareThis();
+obj.display();
+}
+}
